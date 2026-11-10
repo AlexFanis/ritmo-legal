@@ -1,0 +1,5 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pagamento · Ritmo</title><link rel="stylesheet" href="styles.css"></head><body><main><a class="brand" href="suporte">ritmo<span>.</span></a><h1 id="t">Pagamento recebido</h1><p id="m">Obrigado! Volte ao app Ritmo: o Ritmo Pro é liberado assim que o Asaas confirmar o pagamento (no Pix, em instantes; no cartão, logo após a aprovação).</p><p><a href="ritmo://pro">Voltar ao Ritmo</a></p><p>Dúvidas: <a href="mailto:contato@nexocode.com.br">contato@nexocode.com.br</a></p></main><script>
+var s=new URLSearchParams(location.search).get("status");
+if(s==="cancelado"){document.getElementById("t").textContent="Pagamento cancelado";document.getElementById("m").textContent="Nada foi cobrado. Você pode tentar de novo pelo app quando quiser."}
+if(s==="expirado"){document.getElementById("t").textContent="O link expirou";document.getElementById("m").textContent="Nada foi cobrado. Abra o Ritmo e gere um novo pagamento."}
+</script></body></html>
